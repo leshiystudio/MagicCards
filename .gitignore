@@ -1,0 +1,5 @@
+# Obsidian session/workspace state (local UI state, not vault content)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
