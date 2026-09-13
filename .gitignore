@@ -1,5 +1,6 @@
+# Repo root is not an Obsidian vault — the vault lives in MagicCards/
+/.obsidian/
+
 # Obsidian session/workspace state (local UI state, not vault content)
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-**/.obsidian/workspace.json
-**/.obsidian/workspace-mobile.json
+MagicCards/.obsidian/workspace.json
+MagicCards/.obsidian/workspace-mobile.json
