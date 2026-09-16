@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2026 MagicCards contributors
+
 import { materialize, same } from '../engine/engine.ts';
 const opponent=p=>p==='p1'?'p2':'p1';
 function entity(view,r){

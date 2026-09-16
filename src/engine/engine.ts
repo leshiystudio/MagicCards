@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2026 MagicCards contributors
+
 import { normalizeConfig, validateDeck, validateContent, bindAbility, integer, deepFreeze } from '../content/compile.ts';
 
 export type PlayerId = 'p1' | 'p2';

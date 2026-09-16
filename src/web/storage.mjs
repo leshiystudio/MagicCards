@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2026 MagicCards contributors
+
 const PREFIX='magiccards:v1:';
 export function readLocal(key,fallback){try{const value=localStorage.getItem(PREFIX+key);return value?JSON.parse(value):fallback;}catch(error){throw new Error('Не удалось прочитать локальные данные: '+error.message);}}
 export function writeLocal(key,value){try{localStorage.setItem(PREFIX+key,JSON.stringify(value));}catch(error){throw new Error('Не удалось сохранить данные. Экспортируйте файл: '+error.message);}}

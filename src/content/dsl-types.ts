@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2026 MagicCards contributors
+
 /** Small, closed type system for JSON programs; independent from TS erasure. */
 const refType=(caps=[],extra={})=>({kind:'ref',caps,...extra});
 const scalar=kind=>({kind});

@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2026 MagicCards contributors
+
 import {build,root} from '../scripts/build.mjs';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {pathToFileURL,fileURLToPath} from 'node:url';

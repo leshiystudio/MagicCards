@@ -9,3 +9,5 @@
 
 .payment{border:1px solid var(--border);border-radius:12px;margin-top:16px;padding:14px}.payment legend{padding:0 8px}
 @media(max-width:720px){body:has(#main-action){padding-bottom:78px}#main-action{position:fixed;bottom:12px;left:12px;width:calc(100% - 24px);z-index:5;box-shadow:0 3px 22px #000a}}
+
+.legal-footer{padding:12px 24px 28px;text-align:center;color:var(--muted);font-size:12px}.legal-footer a{white-space:nowrap}

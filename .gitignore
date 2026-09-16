@@ -10,3 +10,18 @@ MagicCards/.obsidian/workspace-mobile.json
 /artifacts/
 /node_modules/
 /.node_repl_cell_*
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local editor and operating system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

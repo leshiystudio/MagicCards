@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2026 MagicCards contributors
+
 import assert from 'node:assert/strict';
 export function runScenario(engine,scenario,content,fixture){
   let state=engine.loadFixture(fixture||scenario.fixture,content),last,previous=state;
