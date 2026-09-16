@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2026 MagicCards contributors
+
 import * as E from '../engine/engine.mjs';
 import * as C from '../content/compile.mjs';
 import {readLocal,writeLocal,download,importJSON} from './storage.mjs';

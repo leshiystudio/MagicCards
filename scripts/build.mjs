@@ -1,9 +1,12 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2026 MagicCards contributors
+
 import { readFile, writeFile, mkdir, readdir, copyFile } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stripTypeScriptTypes } from 'node:module';
 export const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
-export async function build(){
+export async function build({pages=false}={}){
   const files=[];
   async function walk(dir){for(const entry of await readdir(resolve(root,dir),{withFileTypes:true})){const name=dir+'/'+entry.name;if(entry.isDirectory())await walk(name);else files.push(name);}}
   await walk('src');
@@ -20,7 +23,11 @@ export async function build(){
   for(const [kind,paths]of Object.entries(manifest))if(Array.isArray(paths))raw[kind]=await Promise.all(paths.map(async p=>JSON.parse(await readFile(resolve(root,p),'utf8'))));
   await mkdir(resolve(root,'dist'),{recursive:true});
   await writeFile(resolve(root,'dist/content.json'),JSON.stringify(raw));
-  for(const file of ['index.html','styles.css'])try{await copyFile(resolve(root,file),resolve(root,'dist',file));}catch(e){if(e.code!=='ENOENT')throw e;}
+  for(const file of ['index.html','styles.css','LICENSE'])await copyFile(resolve(root,file),resolve(root,'dist',file));
+  if(pages){
+    const html=await readFile(resolve(root,'dist/index.html'),'utf8');
+    await writeFile(resolve(root,'dist/index.html'),html.replace('<!-- corresponding-source -->',' · <a href="./source.tar.gz" download>Исходники этой версии</a>'));
+  }
   return {root,files:files.length,cards:raw.cards.length};
 }
-if(globalThis.process?.argv?.[1]&&resolve(globalThis.process.argv[1])===fileURLToPath(import.meta.url))console.log(await build());
+if(globalThis.process?.argv?.[1]&&resolve(globalThis.process.argv[1])===fileURLToPath(import.meta.url))console.log(await build({pages:globalThis.process.argv.includes('--pages')}));

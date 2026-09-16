@@ -13,5 +13,6 @@
     "validate": "node scripts/validate.mjs",
     "cli": "node src/cli/main.mjs",
     "simulate": "node scripts/simulate.mjs"
-  }
+  },
+  "license": "GPL-3.0-only"
 }

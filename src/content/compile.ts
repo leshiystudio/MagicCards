@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2026 MagicCards contributors
+
 import {validateProgramTypes} from './dsl-types.ts';
 /** Content is untrusted data: compile before a match and never execute user code. */
 export class ContentError extends Error {

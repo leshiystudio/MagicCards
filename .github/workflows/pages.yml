@@ -16,12 +16,15 @@ jobs:
           node-version: '24'
       - run: npm run validate
       - run: npm test
-      - run: npm run build
+      - run: npm run build -- --pages
+      - name: Package corresponding source
+        run: git archive --format=tar.gz --output=dist/source.tar.gz HEAD
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
   deploy:
+    if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     permissions:

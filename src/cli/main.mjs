@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2026 MagicCards contributors
+
 import {createInterface} from 'node:readline/promises';
 import {readFile,writeFile} from 'node:fs/promises';
 import {stdin,stdout} from 'node:process';
