@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MagicCards Scenario",
+  "type": "object",
+  "required": [
+    "scenarioId",
+    "fixture",
+    "commands",
+    "assertions"
+  ],
+  "properties": {
+    "scenarioId": {
+      "type": "string"
+    },
+    "fixture": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "assertions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "command_error",
+              "state_unchanged",
+              "no_committed_events",
+              "equals",
+              "event",
+              "stack_size",
+              "invariants"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

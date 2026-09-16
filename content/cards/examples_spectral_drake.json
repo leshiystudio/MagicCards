@@ -1,0 +1,15 @@
+{
+  "id": "examples:spectral_drake",
+  "name": "Призрачный дракон",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 4
+  },
+  "attack": 2,
+  "health": 3,
+  "abilities": [],
+  "keywords": [
+    "flying",
+    "spectral"
+  ]
+}

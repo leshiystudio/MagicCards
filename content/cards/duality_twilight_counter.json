@@ -1,0 +1,27 @@
+{
+  "id": "duality:twilight_counter",
+  "name": "Сумеречное отрицание",
+  "cost": {
+    "resources": {
+      "duality:light": 1,
+      "duality:dark": 1
+    },
+    "generic": 0
+  },
+  "targets": [
+    {
+      "id": "spell",
+      "selector": "pending_spell",
+      "count": 1
+    }
+  ],
+  "effects": [
+    {
+      "type": "counter_spell",
+      "target": {
+        "selected": "spell"
+      }
+    }
+  ],
+  "typeId": "types:instant"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "examples:dragon_apprentice",
+  "name": "Ученица дракона",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 2
+  },
+  "attack": 1,
+  "health": 3,
+  "abilities": [
+    {
+      "id": "offer_self",
+      "kind": "activated",
+      "speed": "fast",
+      "costs": [
+        {
+          "id": "pupil",
+          "type": "sacrifice",
+          "selector": "self",
+          "count": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "create_token",
+          "tokenRef": "tokens:red_dragon_5_5",
+          "controller": {
+            "context": "controller"
+          },
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "keywords": []
+}

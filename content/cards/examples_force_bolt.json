@@ -1,0 +1,24 @@
+{
+  "id": "examples:force_bolt",
+  "name": "Удар по уязвимой цели",
+  "typeId": "types:instant",
+  "cost": {
+    "generic": 1
+  },
+  "targets": [
+    {
+      "id": "victim",
+      "selector": "enemy_damageable",
+      "count": 1
+    }
+  ],
+  "effects": [
+    {
+      "type": "damage",
+      "target": {
+        "selected": "victim"
+      },
+      "amount": 2
+    }
+  ]
+}

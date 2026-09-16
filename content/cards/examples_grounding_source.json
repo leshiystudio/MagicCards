@@ -1,0 +1,28 @@
+{
+  "id": "examples:grounding_source",
+  "name": "Источник приземления",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 3
+  },
+  "attack": 1,
+  "health": 4,
+  "abilities": [
+    {
+      "id": "grounding_field",
+      "kind": "continuous",
+      "modifiers": [
+        {
+          "id": "suppress_flying",
+          "selector": "all_creatures",
+          "operation": "remove_keyword",
+          "keyword": "flying"
+        }
+      ],
+      "activeZones": [
+        "battlefield"
+      ]
+    }
+  ],
+  "keywords": []
+}

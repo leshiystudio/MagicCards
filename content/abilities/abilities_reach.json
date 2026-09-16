@@ -1,0 +1,18 @@
+{
+  "id": "abilities:reach",
+  "name": "Захват",
+  "keywordId": "reach",
+  "behaviors": [],
+  "stacking": "unique",
+  "parameters": {},
+  "hostRequirements": {
+    "all": [
+      "permanent",
+      "combat_body",
+      "ability_host"
+    ]
+  },
+  "activeZones": [
+    "battlefield"
+  ]
+}

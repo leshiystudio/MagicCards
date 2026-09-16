@@ -1,0 +1,31 @@
+{
+  "id": "examples:library_drake",
+  "name": "Дракончик из библиотеки",
+  "cost": {
+    "generic": 3
+  },
+  "attack": 2,
+  "health": 3,
+  "subtypes": [
+    "beast"
+  ],
+  "tags": [
+    "swamp"
+  ],
+  "keywords": [],
+  "text": "Полёт. В начале вашего хода лечит себе 1 повреждение.",
+  "abilities": [
+    {
+      "id": "flight",
+      "ref": "abilities:flying"
+    },
+    {
+      "id": "recovery",
+      "ref": "abilities:regeneration",
+      "params": {
+        "amount": 1
+      }
+    }
+  ],
+  "typeId": "types:creature"
+}

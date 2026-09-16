@@ -1,0 +1,19 @@
+{
+  "id": "tokens:red_dragon_5_5",
+  "name": "Дракон",
+  "subtypes": [
+    "dragon"
+  ],
+  "colors": [
+    "red"
+  ],
+  "attack": 5,
+  "health": 5,
+  "abilities": [
+    {
+      "id": "flight",
+      "ref": "abilities:flying"
+    }
+  ],
+  "typeId": "types:creature"
+}

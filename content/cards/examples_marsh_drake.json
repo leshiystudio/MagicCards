@@ -1,0 +1,21 @@
+{
+  "id": "examples:marsh_drake",
+  "name": "Болотный дракончик",
+  "cost": {
+    "generic": 3
+  },
+  "attack": 2,
+  "health": 3,
+  "subtypes": [
+    "beast"
+  ],
+  "tags": [
+    "swamp"
+  ],
+  "keywords": [
+    "flying"
+  ],
+  "text": "Полёт.",
+  "abilities": [],
+  "typeId": "types:creature"
+}

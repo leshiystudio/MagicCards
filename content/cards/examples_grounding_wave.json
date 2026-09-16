@@ -1,0 +1,30 @@
+{
+  "id": "examples:grounding_wave",
+  "name": "Приземляющая волна",
+  "cost": {
+    "generic": 2
+  },
+  "text": "Все летающие существа теряют полёт до конца хода.",
+  "effects": [
+    {
+      "type": "modify_keyword",
+      "target": {
+        "selector": "all_creatures",
+        "filter": {
+          "type": "has_keyword",
+          "object": {
+            "context": "candidate"
+          },
+          "keyword": "flying",
+          "read": "effective"
+        }
+      },
+      "operation": "remove",
+      "keyword": "flying",
+      "duration": {
+        "type": "until_end_of_turn"
+      }
+    }
+  ],
+  "typeId": "types:instant"
+}

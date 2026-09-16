@@ -1,0 +1,44 @@
+{
+  "id": "core:searing_bolt",
+  "name": "Обжигающий разряд",
+  "typeId": "types:instant",
+  "cost": {
+    "generic": 3
+  },
+  "targets": [
+    {
+      "id": "victim",
+      "selector": "enemy_creature",
+      "count": 1
+    }
+  ],
+  "effects": [
+    {
+      "type": "if",
+      "condition": {
+        "type": "is_damaged",
+        "object": {
+          "selected": "victim"
+        }
+      },
+      "then": [
+        {
+          "type": "damage",
+          "target": {
+            "selected": "victim"
+          },
+          "amount": 4
+        }
+      ],
+      "else": [
+        {
+          "type": "damage",
+          "target": {
+            "selected": "victim"
+          },
+          "amount": 2
+        }
+      ]
+    }
+  ]
+}

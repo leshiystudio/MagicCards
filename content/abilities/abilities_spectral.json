@@ -1,0 +1,31 @@
+{
+  "id": "abilities:spectral",
+  "name": "Призрачность",
+  "keywordId": "spectral",
+  "behaviors": [
+    {
+      "id": "spectral_block",
+      "kind": "interaction_rule",
+      "hostRole": "attacker",
+      "ref": "rules:spectral_block_restriction"
+    },
+    {
+      "id": "spectral_contact",
+      "kind": "interaction_rule",
+      "hostRole": "target",
+      "ref": "rules:spectral_contact_restriction"
+    }
+  ],
+  "stacking": "unique",
+  "parameters": {},
+  "hostRequirements": {
+    "all": [
+      "permanent",
+      "combat_body",
+      "ability_host"
+    ]
+  },
+  "activeZones": [
+    "battlefield"
+  ]
+}

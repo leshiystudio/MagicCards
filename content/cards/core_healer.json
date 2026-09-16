@@ -1,0 +1,27 @@
+{
+  "id": "core:healer",
+  "name": "Лекарь",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 3
+  },
+  "attack": 2,
+  "health": 3,
+  "abilities": [
+    {
+      "id": "arrival",
+      "kind": "triggered",
+      "trigger": "on_enter",
+      "effects": [
+        {
+          "type": "heal",
+          "target": {
+            "context": "controller"
+          },
+          "amount": 2
+        }
+      ]
+    }
+  ],
+  "keywords": []
+}

@@ -1,0 +1,20 @@
+name: Verify MagicCards
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm run validate
+      - run: npm test
+      - run: npm run simulate -- 3
+      - run: npm run build

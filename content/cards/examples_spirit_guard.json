@@ -1,0 +1,15 @@
+{
+  "id": "examples:spirit_guard",
+  "name": "Страж духов",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 3
+  },
+  "attack": 1,
+  "health": 4,
+  "abilities": [],
+  "keywords": [
+    "reach",
+    "spirit_sight"
+  ]
+}

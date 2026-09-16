@@ -1,0 +1,27 @@
+{
+  "id": "duality:light_mend",
+  "name": "Исцеление Светом",
+  "cost": {
+    "resources": {
+      "duality:light": 1
+    },
+    "generic": 0
+  },
+  "targets": [
+    {
+      "id": "patient",
+      "selector": "friendly_character",
+      "count": 1
+    }
+  ],
+  "effects": [
+    {
+      "type": "heal",
+      "target": {
+        "selected": "patient"
+      },
+      "amount": 3
+    }
+  ],
+  "typeId": "types:instant"
+}

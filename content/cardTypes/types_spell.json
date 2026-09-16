@@ -1,0 +1,15 @@
+{
+  "id": "types:spell",
+  "name": "Заклинание",
+  "categories": [
+    "categories:spell"
+  ],
+  "play": {
+    "method": "cast",
+    "timing": "slow",
+    "resolution": "resolve_effects"
+  },
+  "components": {
+    "abilities": {}
+  }
+}

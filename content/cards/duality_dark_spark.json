@@ -1,0 +1,27 @@
+{
+  "id": "duality:dark_spark",
+  "name": "Тёмная искра",
+  "cost": {
+    "resources": {
+      "duality:dark": 1
+    },
+    "generic": 1
+  },
+  "targets": [
+    {
+      "id": "victim",
+      "selector": "enemy_character",
+      "count": 1
+    }
+  ],
+  "effects": [
+    {
+      "type": "damage",
+      "target": {
+        "selected": "victim"
+      },
+      "amount": 3
+    }
+  ],
+  "typeId": "types:instant"
+}

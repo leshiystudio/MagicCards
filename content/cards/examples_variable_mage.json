@@ -1,0 +1,65 @@
+{
+  "id": "examples:variable_mage",
+  "name": "Маг переменных",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 3
+  },
+  "attack": 2,
+  "health": 3,
+  "abilities": [
+    {
+      "id": "double_strike",
+      "kind": "activated",
+      "speed": "fast",
+      "costs": [
+        {
+          "type": "spend_resource",
+          "generic": 1
+        }
+      ],
+      "targets": [
+        {
+          "id": "victim",
+          "selector": "enemy_character",
+          "count": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "damage",
+          "target": {
+            "selected": "victim"
+          },
+          "amount": {
+            "type": "multiply",
+            "left": {
+              "type": "coalesce",
+              "value": {
+                "type": "read_property",
+                "object": {
+                  "context": "source"
+                },
+                "property": "attack",
+                "read": "effective"
+              },
+              "fallback": {
+                "type": "read_property",
+                "object": {
+                  "context": "sourceSnapshot"
+                },
+                "property": "attack",
+                "read": "snapshot"
+              }
+            },
+            "right": {
+              "type": "literal",
+              "value": 2
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "keywords": []
+}

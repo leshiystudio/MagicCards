@@ -1,0 +1,5 @@
+{
+  "id": "duality:dark",
+  "name": "Тьма",
+  "poolPolicy": "step_end"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "core:sentinel",
+  "name": "Дозорный",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 2
+  },
+  "attack": 2,
+  "health": 3,
+  "abilities": [],
+  "keywords": [
+    "vigilance"
+  ]
+}

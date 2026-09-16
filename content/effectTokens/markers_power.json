@@ -1,0 +1,12 @@
+{
+  "id": "markers:power",
+  "name": "Сила",
+  "hostRequirements": {
+    "all": [
+      "permanent",
+      "effect_token_host",
+      "power_meter"
+    ]
+  },
+  "components": []
+}

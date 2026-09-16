@@ -1,0 +1,17 @@
+{
+  "id": "core:ember_rain",
+  "name": "Дождь углей",
+  "typeId": "types:spell",
+  "cost": {
+    "generic": 4
+  },
+  "effects": [
+    {
+      "type": "damage",
+      "target": {
+        "selector": "all_enemy_creatures"
+      },
+      "amount": 1
+    }
+  ]
+}

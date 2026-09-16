@@ -1,0 +1,23 @@
+{
+  "id": "core:counterspell",
+  "name": "Отмена",
+  "typeId": "types:instant",
+  "cost": {
+    "generic": 2
+  },
+  "targets": [
+    {
+      "id": "victim",
+      "selector": "pending_spell",
+      "count": 1
+    }
+  ],
+  "effects": [
+    {
+      "type": "counter_spell",
+      "target": {
+        "selected": "victim"
+      }
+    }
+  ]
+}

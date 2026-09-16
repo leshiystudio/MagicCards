@@ -1,0 +1,28 @@
+{
+  "id": "core:rally",
+  "name": "Воодушевление",
+  "typeId": "types:instant",
+  "cost": {
+    "generic": 2
+  },
+  "targets": [
+    {
+      "id": "victim",
+      "selector": "friendly_creature",
+      "count": 1
+    }
+  ],
+  "effects": [
+    {
+      "type": "modify_stat",
+      "target": {
+        "selected": "victim"
+      },
+      "stat": "attack",
+      "amount": 2,
+      "duration": {
+        "type": "permanent_on_instance"
+      }
+    }
+  ]
+}

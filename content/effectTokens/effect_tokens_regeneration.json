@@ -1,0 +1,22 @@
+{
+  "id": "effect_tokens:regeneration",
+  "name": "Дар регенерации",
+  "components": [
+    {
+      "id": "recovery",
+      "kind": "ability",
+      "ref": "abilities:regeneration",
+      "params": {
+        "amount": 1
+      }
+    }
+  ],
+  "hostRequirements": {
+    "all": [
+      "permanent",
+      "effect_token_host",
+      "ability_host",
+      "health"
+    ]
+  }
+}

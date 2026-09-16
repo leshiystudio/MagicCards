@@ -1,0 +1,16 @@
+{
+  "id": "types:permanent",
+  "name": "Объект поля",
+  "abstract": true,
+  "categories": [],
+  "play": {
+    "method": "cast",
+    "timing": "slow",
+    "resolution": "enter_battlefield"
+  },
+  "components": {
+    "abilities": {},
+    "effect_tokens": {},
+    "attachment_host": {}
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MagicCards CardDefinition v3",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "typeId"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]*:[a-z0-9_-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "typeId": {
+      "type": "string"
+    },
+    "cost": {
+      "type": "object",
+      "properties": {
+        "generic": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "resources": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "attack": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "health": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "armor": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "power": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "abilities": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type"
+        ]
+      }
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "selector",
+          "count"
+        ]
+      }
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "subtypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "text": {
+      "type": "string"
+    },
+    "attachTo": {
+      "type": "object"
+    },
+    "activationGroups": {
+      "type": "object"
+    },
+    "afterResolve": {
+      "type": "object"
+    },
+    "colors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

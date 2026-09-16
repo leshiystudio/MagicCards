@@ -1,0 +1,24 @@
+{
+  "presetId": "automatic_energy_v1",
+  "phase": "MAIN_1",
+  "players": {
+    "p1": {
+      "health": 1,
+      "pool": {
+        "core:energy": 5
+      }
+    }
+  },
+  "board": {
+    "p1": [
+      {
+        "cardId": "examples:blood_artificer",
+        "instanceId": "artificer-1"
+      },
+      {
+        "cardId": "core:recruit",
+        "instanceId": "recruit-1"
+      }
+    ]
+  }
+}

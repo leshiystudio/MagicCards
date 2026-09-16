@@ -1,0 +1,17 @@
+{
+  "id": "duality:light_guard",
+  "name": "Страж Света",
+  "cost": {
+    "resources": {
+      "duality:light": 1
+    },
+    "generic": 1
+  },
+  "attack": 2,
+  "health": 3,
+  "keywords": [
+    "vigilance"
+  ],
+  "abilities": [],
+  "typeId": "types:creature"
+}

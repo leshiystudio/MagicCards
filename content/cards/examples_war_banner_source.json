@@ -1,0 +1,42 @@
+{
+  "id": "examples:war_banner_source",
+  "name": "Знаменосец",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 3
+  },
+  "attack": 1,
+  "health": 4,
+  "abilities": [
+    {
+      "id": "war_banner",
+      "kind": "continuous",
+      "modifiers": [
+        {
+          "id": "allied_strength",
+          "selector": "other_friendly_creatures",
+          "operation": "add_stats",
+          "attack": 1,
+          "health": 1
+        },
+        {
+          "id": "allied_watch",
+          "selector": "other_friendly_creatures",
+          "operation": "grant_keyword",
+          "keyword": "vigilance"
+        },
+        {
+          "id": "enemy_weakness",
+          "selector": "all_enemy_creatures",
+          "operation": "add_stats",
+          "attack": -1,
+          "health": 0
+        }
+      ],
+      "activeZones": [
+        "battlefield"
+      ]
+    }
+  ],
+  "keywords": []
+}

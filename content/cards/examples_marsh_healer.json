@@ -1,0 +1,59 @@
+{
+  "id": "examples:marsh_healer",
+  "name": "Болотный лекарь",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 2
+  },
+  "attack": 1,
+  "health": 3,
+  "abilities": [
+    {
+      "id": "marsh_heal",
+      "kind": "activated",
+      "speed": "fast",
+      "costs": [
+        {
+          "type": "spend_resource",
+          "generic": 1
+        }
+      ],
+      "targets": [
+        {
+          "id": "patient",
+          "selector": "friendly_creature",
+          "count": 1,
+          "filter": {
+            "type": "and",
+            "items": [
+              {
+                "type": "has_subtype",
+                "object": {
+                  "context": "candidate"
+                },
+                "subtype": "beast"
+              },
+              {
+                "type": "has_tag",
+                "object": {
+                  "context": "candidate"
+                },
+                "tag": "swamp"
+              }
+            ]
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "heal",
+          "target": {
+            "selected": "patient"
+          },
+          "amount": 3
+        }
+      ]
+    }
+  ],
+  "keywords": []
+}

@@ -1,0 +1,49 @@
+{
+  "id": "examples:healing_mentor",
+  "name": "Наставник",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 3
+  },
+  "attack": 1,
+  "health": 3,
+  "abilities": [
+    {
+      "id": "healing_discipline",
+      "kind": "continuous",
+      "modifiers": [
+        {
+          "id": "teach_heal",
+          "selector": "other_friendly_creatures",
+          "operation": "grant_ability",
+          "ability": {
+            "id": "granted_heal",
+            "kind": "activated",
+            "speed": "fast",
+            "costs": [
+              {
+                "type": "tap",
+                "object": {
+                  "context": "source"
+                }
+              }
+            ],
+            "effects": [
+              {
+                "type": "heal",
+                "target": {
+                  "context": "controller"
+                },
+                "amount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "activeZones": [
+        "battlefield"
+      ]
+    }
+  ],
+  "keywords": []
+}

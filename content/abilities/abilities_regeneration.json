@@ -1,0 +1,52 @@
+{
+  "id": "abilities:regeneration",
+  "name": "Регенерация",
+  "stacking": "per_source",
+  "parameters": {
+    "amount": {
+      "type": "Integer",
+      "min": 1,
+      "max": 5,
+      "default": 1
+    }
+  },
+  "behaviors": [
+    {
+      "id": "recover",
+      "kind": "triggered",
+      "trigger": "turn_start",
+      "condition": {
+        "type": "equal",
+        "left": {
+          "type": "read_event",
+          "field": "player"
+        },
+        "right": {
+          "context": "controller"
+        }
+      },
+      "effects": [
+        {
+          "type": "heal",
+          "target": {
+            "context": "source"
+          },
+          "amount": {
+            "type": "read_param",
+            "name": "amount"
+          }
+        }
+      ]
+    }
+  ],
+  "hostRequirements": {
+    "all": [
+      "health",
+      "ability_host"
+    ]
+  },
+  "activeZones": [
+    "battlefield"
+  ],
+  "activeOnPlayer": true
+}

@@ -1,0 +1,42 @@
+{
+  "id": "duality:starter",
+  "name": "Свет и Тьма — проверочная",
+  "cards": [
+    {
+      "cardId": "duality:light_well",
+      "count": 5
+    },
+    {
+      "cardId": "duality:dark_well",
+      "count": 5
+    },
+    {
+      "cardId": "duality:light_guard",
+      "count": 2
+    },
+    {
+      "cardId": "duality:light_healer",
+      "count": 2
+    },
+    {
+      "cardId": "duality:dark_acolyte",
+      "count": 2
+    },
+    {
+      "cardId": "duality:twilight_drake",
+      "count": 2
+    },
+    {
+      "cardId": "duality:light_mend",
+      "count": 2
+    },
+    {
+      "cardId": "duality:dark_spark",
+      "count": 2
+    },
+    {
+      "cardId": "duality:twilight_counter",
+      "count": 2
+    }
+  ]
+}

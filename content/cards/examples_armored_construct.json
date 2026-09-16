@@ -1,0 +1,12 @@
+{
+  "id": "examples:armored_construct",
+  "name": "Бронированный конструкт",
+  "typeId": "examples:living_artifact",
+  "cost": {
+    "generic": 3
+  },
+  "attack": 2,
+  "health": 3,
+  "armor": 2,
+  "abilities": []
+}

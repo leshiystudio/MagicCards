@@ -1,0 +1,26 @@
+{
+  "id": "types:creature",
+  "name": "Существо",
+  "extends": "types:permanent",
+  "categories": [
+    "categories:creature"
+  ],
+  "components": {
+    "health": {},
+    "attack": {},
+    "exhaustion": {
+      "readyDelay": "controller_turn_start"
+    },
+    "damageable": {
+      "sink": "health"
+    },
+    "battlefield_slot": {
+      "group": "unit"
+    },
+    "combat": {
+      "canAttack": true,
+      "canBlock": true,
+      "canBeAttacked": false
+    }
+  }
+}

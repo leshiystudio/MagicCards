@@ -1,0 +1,31 @@
+{
+  "id": "examples:arrival_blessing",
+  "name": "Благословитель",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 3
+  },
+  "attack": 2,
+  "health": 3,
+  "abilities": [
+    {
+      "id": "arrival_blessing",
+      "kind": "triggered",
+      "trigger": "on_enter",
+      "effects": [
+        {
+          "type": "apply_effect_token",
+          "definitionId": "effect_tokens:strength",
+          "target": {
+            "selector": "other_friendly_creatures"
+          },
+          "amount": 1,
+          "duration": {
+            "type": "permanent_on_instance"
+          }
+        }
+      ]
+    }
+  ],
+  "keywords": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "rules:spectral_block_restriction",
+  "interaction": "block",
+  "when": {
+    "type": "has_keyword",
+    "object": {
+      "context": "attacker"
+    },
+    "keyword": "spectral",
+    "read": "effective"
+  },
+  "require": {
+    "type": "has_keyword",
+    "object": {
+      "context": "blocker"
+    },
+    "keyword": "spirit_sight",
+    "read": "effective"
+  },
+  "reasonCode": "BLOCK_REQUIRES_SPIRIT_SIGHT"
+}

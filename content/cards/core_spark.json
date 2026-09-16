@@ -1,0 +1,24 @@
+{
+  "id": "core:spark",
+  "name": "Искра",
+  "typeId": "types:instant",
+  "cost": {
+    "generic": 2
+  },
+  "targets": [
+    {
+      "id": "victim",
+      "selector": "enemy_character",
+      "count": 1
+    }
+  ],
+  "effects": [
+    {
+      "type": "damage",
+      "target": {
+        "selected": "victim"
+      },
+      "amount": 3
+    }
+  ]
+}

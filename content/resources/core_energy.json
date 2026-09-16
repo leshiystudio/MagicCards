@@ -1,0 +1,5 @@
+{
+  "id": "core:energy",
+  "name": "Энергия",
+  "poolPolicy": "owner_turn_start"
+}

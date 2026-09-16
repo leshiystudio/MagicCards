@@ -1,0 +1,25 @@
+{
+  "id": "abilities:flying",
+  "name": "Полёт",
+  "stacking": "unique",
+  "keywordId": "flying",
+  "parameters": {},
+  "behaviors": [
+    {
+      "id": "air_block",
+      "kind": "interaction_rule",
+      "hostRole": "attacker",
+      "ref": "rules:flying_block_restriction"
+    }
+  ],
+  "hostRequirements": {
+    "all": [
+      "permanent",
+      "combat_body",
+      "ability_host"
+    ]
+  },
+  "activeZones": [
+    "battlefield"
+  ]
+}

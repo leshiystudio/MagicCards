@@ -1,0 +1,18 @@
+{
+  "id": "abilities:spirit_sight",
+  "name": "Видение духов",
+  "keywordId": "spirit_sight",
+  "behaviors": [],
+  "stacking": "unique",
+  "parameters": {},
+  "hostRequirements": {
+    "all": [
+      "permanent",
+      "combat_body",
+      "ability_host"
+    ]
+  },
+  "activeZones": [
+    "battlefield"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "examples:necromancers_call",
+  "name": "Зов Некроманта",
+  "typeId": "types:spell",
+  "cost": {
+    "resources": {
+      "duality:dark": 2
+    },
+    "generic": 2
+  },
+  "targets": [
+    {
+      "id": "fallen",
+      "selector": "graveyard_creature_card",
+      "count": 1
+    }
+  ],
+  "effects": [
+    {
+      "type": "return_to_battlefield",
+      "target": {
+        "selected": "fallen"
+      },
+      "controller": {
+        "context": "controller"
+      }
+    }
+  ]
+}

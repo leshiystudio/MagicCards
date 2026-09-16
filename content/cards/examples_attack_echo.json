@@ -1,0 +1,40 @@
+{
+  "id": "examples:attack_echo",
+  "name": "Эхо атаки",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 3
+  },
+  "attack": 2,
+  "health": 3,
+  "abilities": [
+    {
+      "id": "attack_echo",
+      "kind": "triggered",
+      "trigger": "creature_attacked",
+      "condition": {
+        "type": "equal",
+        "left": {
+          "type": "read_event",
+          "field": "attacker"
+        },
+        "right": {
+          "context": "source"
+        }
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "target": {
+            "context": "opponent"
+          },
+          "amount": {
+            "type": "read_event",
+            "field": "attackerSnapshot.attack"
+          }
+        }
+      ]
+    }
+  ],
+  "keywords": []
+}

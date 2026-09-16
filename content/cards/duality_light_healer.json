@@ -1,0 +1,29 @@
+{
+  "id": "duality:light_healer",
+  "name": "Целитель Света",
+  "cost": {
+    "resources": {
+      "duality:light": 1
+    },
+    "generic": 2
+  },
+  "attack": 2,
+  "health": 3,
+  "abilities": [
+    {
+      "id": "arrival_heal",
+      "kind": "triggered",
+      "trigger": "on_enter",
+      "effects": [
+        {
+          "type": "heal",
+          "target": {
+            "context": "controller"
+          },
+          "amount": 2
+        }
+      ]
+    }
+  ],
+  "typeId": "types:creature"
+}

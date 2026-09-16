@@ -1,0 +1,24 @@
+{
+  "id": "core:mend",
+  "name": "Исцеление",
+  "typeId": "types:instant",
+  "cost": {
+    "generic": 1
+  },
+  "targets": [
+    {
+      "id": "victim",
+      "selector": "friendly_character",
+      "count": 1
+    }
+  ],
+  "effects": [
+    {
+      "type": "heal",
+      "target": {
+        "selected": "victim"
+      },
+      "amount": 3
+    }
+  ]
+}

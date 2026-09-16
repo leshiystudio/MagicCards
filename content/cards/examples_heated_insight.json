@@ -1,0 +1,52 @@
+{
+  "id": "examples:heated_insight",
+  "name": "Пламенное озарение",
+  "cost": {
+    "generic": 3
+  },
+  "text": "Выберите вражеское существо. Если оно повреждено, нанесите ему 4 урона, иначе 2. Затем возьмите карту.",
+  "targets": [
+    {
+      "id": "victim",
+      "selector": "enemy_creature",
+      "count": 1
+    }
+  ],
+  "effects": [
+    {
+      "type": "if",
+      "condition": {
+        "type": "is_damaged",
+        "object": {
+          "selected": "victim"
+        }
+      },
+      "then": [
+        {
+          "type": "damage",
+          "target": {
+            "selected": "victim"
+          },
+          "amount": 4
+        }
+      ],
+      "else": [
+        {
+          "type": "damage",
+          "target": {
+            "selected": "victim"
+          },
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "type": "draw",
+      "player": {
+        "context": "controller"
+      },
+      "amount": 1
+    }
+  ],
+  "typeId": "types:instant"
+}

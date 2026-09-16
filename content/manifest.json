@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 3,
+  "rulesetId": "prototype-stack-v1",
+  "rulesetVersion": "0.12",
+  "cards": [
+    "content/cards/duality_light_well.json",
+    "content/cards/duality_dark_well.json",
+    "content/cards/duality_light_guard.json",
+    "content/cards/duality_light_healer.json",
+    "content/cards/duality_dark_acolyte.json",
+    "content/cards/duality_twilight_drake.json",
+    "content/cards/duality_light_mend.json",
+    "content/cards/duality_dark_spark.json",
+    "content/cards/duality_twilight_counter.json",
+    "content/cards/examples_heated_insight.json",
+    "content/cards/examples_blood_artificer.json",
+    "content/cards/examples_marsh_drake.json",
+    "content/cards/examples_grounding_wave.json",
+    "content/cards/examples_library_drake.json",
+    "content/cards/examples_renewal_enchantment.json",
+    "content/cards/examples_dragon_treasure.json",
+    "content/cards/examples_power_keeper.json",
+    "content/cards/examples_necromancers_call.json",
+    "content/cards/examples_armored_construct.json",
+    "content/cards/examples_force_bolt.json",
+    "content/cards/core_recruit.json",
+    "content/cards/core_sentinel.json",
+    "content/cards/core_healer.json",
+    "content/cards/core_archivist.json",
+    "content/cards/core_ember_bearer.json",
+    "content/cards/core_spark.json",
+    "content/cards/core_mend.json",
+    "content/cards/core_rally.json",
+    "content/cards/core_execution.json",
+    "content/cards/core_searing_bolt.json",
+    "content/cards/core_ember_rain.json",
+    "content/cards/core_counterspell.json",
+    "content/cards/examples_war_banner_source.json",
+    "content/cards/examples_healing_mentor.json",
+    "content/cards/examples_harvest_keeper.json",
+    "content/cards/examples_steadfast_guard.json",
+    "content/cards/examples_reach_guard.json",
+    "content/cards/examples_spectral_drake.json",
+    "content/cards/examples_spirit_guard.json",
+    "content/cards/examples_arrival_blessing.json",
+    "content/cards/examples_egg.json",
+    "content/cards/examples_dragon_apprentice.json",
+    "content/cards/examples_variable_mage.json",
+    "content/cards/examples_marsh_healer.json",
+    "content/cards/examples_grounding_source.json",
+    "content/cards/examples_dragon_caller.json",
+    "content/cards/examples_comfort_keeper.json",
+    "content/cards/examples_attack_echo.json",
+    "content/cards/examples_plague_pulse.json",
+    "content/cards/examples_grounding_weather.json",
+    "content/cards/examples_insight_spell.json",
+    "content/cards/examples_wing_gift.json",
+    "content/cards/examples_suppress_steadfast.json"
+  ],
+  "cardTypes": [
+    "content/cardTypes/types_permanent.json",
+    "content/cardTypes/types_creature.json",
+    "content/cardTypes/types_artifact.json",
+    "content/cardTypes/types_spell.json",
+    "content/cardTypes/types_instant.json",
+    "content/cardTypes/types_enchantment.json",
+    "content/cardTypes/types_resource.json",
+    "content/cardTypes/types_champion.json",
+    "content/cardTypes/examples_living_artifact.json"
+  ],
+  "abilities": [
+    "content/abilities/abilities_flying.json",
+    "content/abilities/abilities_regeneration.json",
+    "content/abilities/abilities_steadfast.json",
+    "content/abilities/abilities_insight.json",
+    "content/abilities/abilities_fire_breathing.json",
+    "content/abilities/abilities_vigilance.json",
+    "content/abilities/abilities_reach.json",
+    "content/abilities/abilities_spirit_sight.json",
+    "content/abilities/abilities_spectral.json"
+  ],
+  "effectTokens": [
+    "content/effectTokens/effect_tokens_strength.json",
+    "content/effectTokens/effect_tokens_weakness.json",
+    "content/effectTokens/effect_tokens_regeneration.json",
+    "content/effectTokens/effect_tokens_grounded.json",
+    "content/effectTokens/markers_gold.json",
+    "content/effectTokens/markers_power.json"
+  ],
+  "tokens": [
+    "content/tokens/tokens_red_dragon_5_5.json",
+    "content/tokens/tokens_red_dragon_2_2.json"
+  ],
+  "resources": [
+    "content/resources/duality_light.json",
+    "content/resources/duality_dark.json",
+    "content/resources/core_energy.json"
+  ],
+  "rules": [
+    "content/rules/rules_flying_block_restriction.json",
+    "content/rules/rules_spectral_block_restriction.json",
+    "content/rules/rules_spectral_contact_restriction.json"
+  ],
+  "presets": [
+    "content/presets/duality_sources_v1.json",
+    "content/presets/automatic_energy_v1.json"
+  ],
+  "decks": [
+    "content/decks/duality_starter.json",
+    "content/decks/core_starter.json"
+  ]
+}

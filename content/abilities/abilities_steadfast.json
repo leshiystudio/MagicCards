@@ -1,0 +1,32 @@
+{
+  "id": "abilities:steadfast",
+  "name": "Стойкость",
+  "stacking": "per_source",
+  "parameters": {},
+  "behaviors": [
+    {
+      "id": "extra_health",
+      "kind": "continuous",
+      "modifiers": [
+        {
+          "id": "health_bonus",
+          "selector": "self",
+          "operation": "add_stats",
+          "attack": 0,
+          "health": 2
+        }
+      ]
+    }
+  ],
+  "hostRequirements": {
+    "all": [
+      "permanent",
+      "ability_host",
+      "attack",
+      "health"
+    ]
+  },
+  "activeZones": [
+    "battlefield"
+  ]
+}

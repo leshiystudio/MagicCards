@@ -1,0 +1,14 @@
+{
+  "id": "examples:insight_spell",
+  "name": "Озарение",
+  "typeId": "types:instant",
+  "cost": {
+    "generic": 2
+  },
+  "abilities": [
+    {
+      "id": "insight",
+      "ref": "abilities:insight"
+    }
+  ]
+}

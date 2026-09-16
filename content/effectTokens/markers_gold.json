@@ -1,0 +1,11 @@
+{
+  "id": "markers:gold",
+  "name": "Золото",
+  "hostRequirements": {
+    "all": [
+      "permanent",
+      "effect_token_host"
+    ]
+  },
+  "components": []
+}

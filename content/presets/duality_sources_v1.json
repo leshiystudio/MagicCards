@@ -1,0 +1,22 @@
+{
+  "presetId": "duality_sources_v1",
+  "economy": {
+    "mode": "deck_sources",
+    "enabledResourceIds": [
+      "duality:light",
+      "duality:dark"
+    ],
+    "sourcePlaysPerTurn": 1
+  },
+  "deck": {
+    "size": 24,
+    "maxCopiesPerCard": 2,
+    "unlimitedCopyCardIds": [
+      "duality:light_well",
+      "duality:dark_well"
+    ]
+  },
+  "limits": {
+    "maxCreaturesPerPlayer": 7
+  }
+}

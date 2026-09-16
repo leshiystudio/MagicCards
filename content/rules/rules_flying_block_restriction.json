@@ -1,0 +1,34 @@
+{
+  "id": "rules:flying_block_restriction",
+  "interaction": "block",
+  "when": {
+    "type": "has_keyword",
+    "object": {
+      "context": "attacker"
+    },
+    "keyword": "flying",
+    "read": "effective"
+  },
+  "require": {
+    "type": "or",
+    "items": [
+      {
+        "type": "has_keyword",
+        "object": {
+          "context": "blocker"
+        },
+        "keyword": "flying",
+        "read": "effective"
+      },
+      {
+        "type": "has_keyword",
+        "object": {
+          "context": "blocker"
+        },
+        "keyword": "reach",
+        "read": "effective"
+      }
+    ]
+  },
+  "reasonCode": "BLOCK_REQUIRES_FLYING_OR_REACH"
+}

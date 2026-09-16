@@ -1,0 +1,5 @@
+{
+  "id": "duality:light",
+  "name": "Свет",
+  "poolPolicy": "step_end"
+}

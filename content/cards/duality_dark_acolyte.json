@@ -1,0 +1,29 @@
+{
+  "id": "duality:dark_acolyte",
+  "name": "Послушник Тьмы",
+  "cost": {
+    "resources": {
+      "duality:dark": 1
+    },
+    "generic": 1
+  },
+  "attack": 2,
+  "health": 1,
+  "abilities": [
+    {
+      "id": "farewell",
+      "kind": "triggered",
+      "trigger": "on_death",
+      "effects": [
+        {
+          "type": "damage",
+          "target": {
+            "context": "opponent"
+          },
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "typeId": "types:creature"
+}

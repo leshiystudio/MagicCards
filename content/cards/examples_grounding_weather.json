@@ -1,0 +1,24 @@
+{
+  "id": "examples:grounding_weather",
+  "name": "Нелётная погода",
+  "typeId": "types:instant",
+  "cost": {
+    "generic": 3
+  },
+  "effects": [
+    {
+      "type": "create_continuous_effect",
+      "duration": {
+        "type": "until_end_of_turn"
+      },
+      "modifiers": [
+        {
+          "id": "ground_all",
+          "selector": "all_creatures",
+          "operation": "remove_keyword",
+          "keyword": "flying"
+        }
+      ]
+    }
+  ]
+}

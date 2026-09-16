@@ -1,0 +1,23 @@
+{
+  "id": "duality:twilight_drake",
+  "name": "Сумеречный дракон",
+  "cost": {
+    "resources": {
+      "duality:light": 1,
+      "duality:dark": 1
+    },
+    "generic": 1
+  },
+  "attack": 3,
+  "health": 3,
+  "subtypes": [
+    "dragon"
+  ],
+  "abilities": [
+    {
+      "id": "flight",
+      "ref": "abilities:flying"
+    }
+  ],
+  "typeId": "types:creature"
+}

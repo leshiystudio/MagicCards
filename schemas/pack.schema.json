@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MagicCards ExportBundle",
+  "type": "object",
+  "required": [
+    "format",
+    "version",
+    "content"
+  ],
+  "properties": {
+    "format": {
+      "const": "magiccards-pack"
+    },
+    "version": {
+      "const": 1
+    },
+    "content": {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "rulesetId",
+        "rulesetVersion",
+        "cards",
+        "cardTypes",
+        "abilities",
+        "tokens",
+        "effectTokens",
+        "resources",
+        "rules",
+        "decks",
+        "presets"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 3
+        },
+        "rulesetId": {
+          "const": "prototype-stack-v1"
+        },
+        "rulesetVersion": {
+          "const": "0.12"
+        },
+        "cards": {
+          "type": "array",
+          "items": {
+            "$ref": "card.schema.json"
+          }
+        }
+      }
+    },
+    "deck": {
+      "type": "object"
+    },
+    "scenarios": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

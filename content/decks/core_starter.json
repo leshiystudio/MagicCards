@@ -1,0 +1,54 @@
+{
+  "id": "core:starter",
+  "name": "Классическая колода",
+  "cards": [
+    {
+      "cardId": "core:recruit",
+      "count": 2
+    },
+    {
+      "cardId": "core:sentinel",
+      "count": 2
+    },
+    {
+      "cardId": "core:healer",
+      "count": 2
+    },
+    {
+      "cardId": "core:archivist",
+      "count": 2
+    },
+    {
+      "cardId": "core:ember_bearer",
+      "count": 2
+    },
+    {
+      "cardId": "core:spark",
+      "count": 2
+    },
+    {
+      "cardId": "core:mend",
+      "count": 2
+    },
+    {
+      "cardId": "core:rally",
+      "count": 2
+    },
+    {
+      "cardId": "core:execution",
+      "count": 2
+    },
+    {
+      "cardId": "core:searing_bolt",
+      "count": 2
+    },
+    {
+      "cardId": "core:ember_rain",
+      "count": 2
+    },
+    {
+      "cardId": "core:counterspell",
+      "count": 2
+    }
+  ]
+}

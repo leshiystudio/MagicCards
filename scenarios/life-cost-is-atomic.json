@@ -1,0 +1,43 @@
+{
+  "scenarioId": "core:life_cost_is_atomic",
+  "fixture": "fixtures/artificer-no-life.json",
+  "commands": [
+    {
+      "type": "ActivateAbility",
+      "actorId": "p1",
+      "source": {
+        "instanceId": "artificer-1",
+        "generation": 1
+      },
+      "abilityId": "blood_exchange",
+      "targets": {
+        "beneficiary": {
+          "playerId": "p1"
+        }
+      },
+      "costChoices": {
+        "offering": [
+          {
+            "instanceId": "recruit-1",
+            "generation": 1
+          }
+        ]
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "type": "command_error",
+      "code": "INSUFFICIENT_LIFE"
+    },
+    {
+      "type": "state_unchanged"
+    },
+    {
+      "type": "no_committed_events"
+    },
+    {
+      "type": "invariants"
+    }
+  ]
+}

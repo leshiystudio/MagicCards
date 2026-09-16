@@ -1,0 +1,13 @@
+{
+  "id": "types:artifact",
+  "name": "Артефакт",
+  "extends": "types:permanent",
+  "categories": [
+    "categories:artifact"
+  ],
+  "components": {
+    "exhaustion": {
+      "readyDelay": "none"
+    }
+  }
+}

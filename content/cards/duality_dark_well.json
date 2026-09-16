@@ -1,0 +1,27 @@
+{
+  "id": "duality:dark_well",
+  "name": "Источник Тьмы",
+  "abilities": [
+    {
+      "id": "produce",
+      "kind": "resource_activated",
+      "costs": [
+        {
+          "type": "tap",
+          "object": {
+            "context": "source"
+          }
+        }
+      ],
+      "productionOptions": [
+        {
+          "id": "one",
+          "resources": {
+            "duality:dark": 1
+          }
+        }
+      ]
+    }
+  ],
+  "typeId": "types:resource"
+}

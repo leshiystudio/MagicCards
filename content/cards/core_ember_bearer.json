@@ -1,0 +1,27 @@
+{
+  "id": "core:ember_bearer",
+  "name": "Носитель углей",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 2
+  },
+  "attack": 2,
+  "health": 1,
+  "abilities": [
+    {
+      "id": "death",
+      "kind": "triggered",
+      "trigger": "on_death",
+      "effects": [
+        {
+          "type": "damage",
+          "target": {
+            "context": "opponent"
+          },
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "keywords": []
+}

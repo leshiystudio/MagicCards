@@ -1,0 +1,84 @@
+{
+  "id": "examples:harvest_keeper",
+  "name": "Хранитель жатвы",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 4
+  },
+  "attack": 2,
+  "health": 4,
+  "abilities": [
+    {
+      "id": "harvest_after_attack",
+      "kind": "triggered",
+      "trigger": "combat_ended",
+      "condition": {
+        "type": "and",
+        "items": [
+          {
+            "type": "equal",
+            "left": {
+              "type": "read_event",
+              "field": "player"
+            },
+            "right": {
+              "context": "controller"
+            }
+          },
+          {
+            "type": "greater",
+            "left": {
+              "type": "count",
+              "items": {
+                "type": "read_event",
+                "field": "attackers"
+              }
+            },
+            "right": 0
+          }
+        ]
+      },
+      "targets": [
+        {
+          "id": "beneficiary",
+          "selector": "friendly_character",
+          "count": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "let",
+          "name": "fallen",
+          "value": {
+            "type": "count",
+            "items": {
+              "type": "read_event",
+              "field": "deaths"
+            }
+          }
+        },
+        {
+          "type": "damage",
+          "target": {
+            "context": "opponent"
+          },
+          "amount": {
+            "type": "local",
+            "name": "fallen"
+          }
+        },
+        {
+          "type": "heal",
+          "target": {
+            "selected": "beneficiary"
+          },
+          "amount": {
+            "type": "local",
+            "name": "fallen"
+          }
+        }
+      ]
+    }
+  ],
+  "keywords": []
+}

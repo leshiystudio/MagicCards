@@ -1,0 +1,18 @@
+{
+  "presetId": "automatic_energy_v1",
+  "economy": {
+    "mode": "automatic_growth",
+    "resourceId": "core:energy",
+    "initialCapacity": 0,
+    "growthPerTurn": 1,
+    "maxCapacity": 10
+  },
+  "deck": {
+    "size": 24,
+    "maxCopiesPerCard": 2,
+    "unlimitedCopyCardIds": []
+  },
+  "limits": {
+    "maxCreaturesPerPlayer": 7
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "abilities:vigilance",
+  "name": "Бдительность",
+  "keywordId": "vigilance",
+  "behaviors": [],
+  "stacking": "unique",
+  "parameters": {},
+  "hostRequirements": {
+    "all": [
+      "permanent",
+      "combat_body",
+      "ability_host"
+    ]
+  },
+  "activeZones": [
+    "battlefield"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "rules:spectral_contact_restriction",
+  "interaction": "contact",
+  "when": {
+    "type": "has_keyword",
+    "object": {
+      "context": "target"
+    },
+    "keyword": "spectral",
+    "read": "effective"
+  },
+  "require": {
+    "type": "has_keyword",
+    "object": {
+      "context": "actor"
+    },
+    "keyword": "spirit_sight",
+    "read": "effective"
+  },
+  "reasonCode": "CONTACT_REQUIRES_SPIRIT_SIGHT"
+}

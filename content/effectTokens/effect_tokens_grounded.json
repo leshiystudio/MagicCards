@@ -1,0 +1,20 @@
+{
+  "id": "effect_tokens:grounded",
+  "name": "Приземление",
+  "components": [
+    {
+      "id": "flight_mask",
+      "kind": "keyword",
+      "operation": "remove",
+      "keyword": "flying"
+    }
+  ],
+  "hostRequirements": {
+    "all": [
+      "permanent",
+      "effect_token_host",
+      "ability_host",
+      "combat_body"
+    ]
+  }
+}

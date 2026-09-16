@@ -1,0 +1,30 @@
+{
+  "id": "abilities:insight",
+  "name": "Озарение",
+  "stacking": "per_source",
+  "parameters": {},
+  "behaviors": [
+    {
+      "id": "draw_extra",
+      "kind": "on_resolve",
+      "effects": [
+        {
+          "type": "draw",
+          "player": {
+            "context": "controller"
+          },
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "hostRequirements": {
+    "all": [
+      "one_shot",
+      "ability_host"
+    ]
+  },
+  "activeZones": [
+    "stack"
+  ]
+}

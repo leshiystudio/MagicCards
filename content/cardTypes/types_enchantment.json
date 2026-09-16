@@ -1,0 +1,22 @@
+{
+  "id": "types:enchantment",
+  "name": "Прикрепляемые чары",
+  "extends": "types:permanent",
+  "categories": [
+    "categories:enchantment"
+  ],
+  "play": {
+    "method": "cast",
+    "timing": "slow",
+    "resolution": "attach"
+  },
+  "components": {
+    "attachment": {
+      "hostCount": 1,
+      "onInvalid": "graveyard"
+    },
+    "exhaustion": {
+      "readyDelay": "none"
+    }
+  }
+}

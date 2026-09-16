@@ -1,0 +1,79 @@
+{
+  "id": "examples:power_keeper",
+  "name": "Хранитель Силы",
+  "typeId": "types:champion",
+  "cost": {
+    "resources": {
+      "duality:light": 1,
+      "duality:dark": 1
+    },
+    "generic": 2
+  },
+  "power": 4,
+  "activationGroups": {
+    "power": {
+      "timesPerTurn": 1
+    }
+  },
+  "abilities": [
+    {
+      "id": "insight",
+      "kind": "activated",
+      "speed": "slow",
+      "usageGroup": "power",
+      "costs": [
+        {
+          "id": "grow",
+          "type": "place_effect_tokens",
+          "object": {
+            "context": "source"
+          },
+          "definitionId": "markers:power",
+          "amount": 2
+        }
+      ],
+      "effects": [
+        {
+          "type": "draw",
+          "player": {
+            "context": "controller"
+          },
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "id": "banish",
+      "kind": "activated",
+      "speed": "slow",
+      "usageGroup": "power",
+      "costs": [
+        {
+          "id": "spend",
+          "type": "pay_effect_tokens",
+          "object": {
+            "context": "source"
+          },
+          "definitionId": "markers:power",
+          "amount": 10
+        }
+      ],
+      "targets": [
+        {
+          "id": "victim",
+          "selector": "player",
+          "count": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "exile_top",
+          "player": {
+            "selected": "victim"
+          },
+          "amount": 3
+        }
+      ]
+    }
+  ]
+}

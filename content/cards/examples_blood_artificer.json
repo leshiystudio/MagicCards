@@ -1,0 +1,86 @@
+{
+  "id": "examples:blood_artificer",
+  "name": "Кровавый ремесленник",
+  "cost": {
+    "generic": 3
+  },
+  "attack": 2,
+  "health": 4,
+  "text": "Две активации: 2 ресурса и поворот — 2 урона врагу; 2 жизни и жертва другого своего существа — лечение своему игроку или существу на атаку жертвы.",
+  "keywords": [],
+  "abilities": [
+    {
+      "id": "charged_strike",
+      "kind": "activated",
+      "speed": "fast",
+      "costs": [
+        {
+          "type": "spend_resource",
+          "generic": 2
+        },
+        {
+          "type": "tap",
+          "object": {
+            "context": "source"
+          }
+        }
+      ],
+      "targets": [
+        {
+          "id": "victim",
+          "selector": "enemy_character",
+          "count": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "damage",
+          "target": {
+            "selected": "victim"
+          },
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "id": "blood_exchange",
+      "kind": "activated",
+      "speed": "fast",
+      "costs": [
+        {
+          "type": "pay_life",
+          "amount": 2
+        },
+        {
+          "id": "offering",
+          "type": "sacrifice",
+          "selector": "friendly_creature",
+          "excludeSource": true,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "id": "beneficiary",
+          "selector": "friendly_character",
+          "count": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "heal",
+          "target": {
+            "selected": "beneficiary"
+          },
+          "amount": {
+            "type": "read_cost",
+            "costId": "offering",
+            "index": 0,
+            "property": "attack"
+          }
+        }
+      ]
+    }
+  ],
+  "typeId": "types:creature"
+}

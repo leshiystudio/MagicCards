@@ -1,0 +1,14 @@
+{
+  "id": "examples:reach_guard",
+  "name": "Страж с захватом",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 2
+  },
+  "attack": 1,
+  "health": 3,
+  "abilities": [],
+  "keywords": [
+    "reach"
+  ]
+}

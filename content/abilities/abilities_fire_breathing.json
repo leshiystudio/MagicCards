@@ -1,0 +1,42 @@
+{
+  "id": "abilities:fire_breathing",
+  "name": "Огненное дыхание",
+  "stacking": "unique",
+  "parameters": {},
+  "behaviors": [
+    {
+      "id": "breathe",
+      "kind": "activated",
+      "speed": "fast",
+      "costs": [
+        {
+          "type": "spend_resource",
+          "generic": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "modify_stat",
+          "target": {
+            "context": "source"
+          },
+          "stat": "attack",
+          "amount": 1,
+          "duration": {
+            "type": "until_end_of_turn"
+          }
+        }
+      ]
+    }
+  ],
+  "hostRequirements": {
+    "all": [
+      "permanent",
+      "ability_host",
+      "attack"
+    ]
+  },
+  "activeZones": [
+    "battlefield"
+  ]
+}

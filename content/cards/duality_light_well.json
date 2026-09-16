@@ -1,0 +1,27 @@
+{
+  "id": "duality:light_well",
+  "name": "Источник Света",
+  "abilities": [
+    {
+      "id": "produce",
+      "kind": "resource_activated",
+      "costs": [
+        {
+          "type": "tap",
+          "object": {
+            "context": "source"
+          }
+        }
+      ],
+      "productionOptions": [
+        {
+          "id": "one",
+          "resources": {
+            "duality:light": 1
+          }
+        }
+      ]
+    }
+  ],
+  "typeId": "types:resource"
+}

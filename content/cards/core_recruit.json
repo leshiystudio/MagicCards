@@ -1,0 +1,12 @@
+{
+  "id": "core:recruit",
+  "name": "Новобранец",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 1
+  },
+  "attack": 1,
+  "health": 2,
+  "abilities": [],
+  "keywords": []
+}

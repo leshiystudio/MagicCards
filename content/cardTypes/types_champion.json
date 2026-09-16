@@ -1,0 +1,23 @@
+{
+  "id": "types:champion",
+  "name": "Носитель Силы",
+  "extends": "types:permanent",
+  "categories": [
+    "categories:champion"
+  ],
+  "components": {
+    "power_meter": {
+      "markerId": "markers:power",
+      "initialFrom": "power",
+      "onZero": "graveyard"
+    },
+    "damageable": {
+      "sink": "power"
+    },
+    "combat": {
+      "canAttack": false,
+      "canBlock": false,
+      "canBeAttacked": true
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "examples:renewal_enchantment",
+  "name": "Чары восстановления",
+  "typeId": "types:enchantment",
+  "cost": {
+    "resources": {
+      "duality:light": 1
+    },
+    "generic": 1
+  },
+  "attachTo": {
+    "selector": "friendly_permanent",
+    "filter": {
+      "type": "and",
+      "items": [
+        {
+          "type": "has_capability",
+          "object": {
+            "context": "candidate"
+          },
+          "capability": "health",
+          "read": "base"
+        },
+        {
+          "type": "has_capability",
+          "object": {
+            "context": "candidate"
+          },
+          "capability": "ability_host",
+          "read": "base"
+        }
+      ]
+    }
+  },
+  "abilities": [
+    {
+      "id": "teach_recovery",
+      "kind": "continuous",
+      "modifiers": [
+        {
+          "id": "recovery",
+          "selector": "attached_host",
+          "operation": "grant_ability",
+          "ability": {
+            "ref": "abilities:regeneration",
+            "params": {
+              "amount": 1
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

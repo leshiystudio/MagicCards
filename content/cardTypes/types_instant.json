@@ -1,0 +1,10 @@
+{
+  "id": "types:instant",
+  "name": "Мгновенное заклинание",
+  "extends": "types:spell",
+  "play": {
+    "method": "cast",
+    "timing": "fast",
+    "resolution": "resolve_effects"
+  }
+}

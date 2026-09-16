@@ -1,0 +1,12 @@
+{
+  "id": "examples:living_artifact",
+  "name": "Артефакт-существо",
+  "extends": "types:creature",
+  "categories": [
+    "categories:creature",
+    "categories:artifact"
+  ],
+  "components": {
+    "armor": {}
+  }
+}

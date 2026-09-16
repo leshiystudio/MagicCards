@@ -1,0 +1,29 @@
+{
+  "id": "core:execution",
+  "name": "Добивание",
+  "typeId": "types:spell",
+  "cost": {
+    "generic": 3
+  },
+  "targets": [
+    {
+      "id": "victim",
+      "selector": "enemy_creature",
+      "count": 1,
+      "filter": {
+        "type": "is_damaged",
+        "object": {
+          "context": "candidate"
+        }
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "destroy",
+      "target": {
+        "selected": "victim"
+      }
+    }
+  ]
+}

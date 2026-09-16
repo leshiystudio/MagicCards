@@ -1,0 +1,83 @@
+{
+  "id": "examples:dragon_treasure",
+  "name": "Сокровище Дракона",
+  "typeId": "types:artifact",
+  "cost": {
+    "generic": 3
+  },
+  "abilities": [
+    {
+      "id": "collect_gold",
+      "kind": "triggered",
+      "trigger": "creature_entered",
+      "condition": {
+        "type": "and",
+        "items": [
+          {
+            "type": "equal",
+            "left": {
+              "type": "read_event",
+              "field": "controller"
+            },
+            "right": {
+              "context": "controller"
+            }
+          },
+          {
+            "type": "has_subtype",
+            "object": {
+              "type": "read_event",
+              "field": "creatureSnapshot"
+            },
+            "subtype": "dragon",
+            "read": "snapshot"
+          }
+        ]
+      },
+      "effects": [
+        {
+          "type": "apply_effect_token",
+          "definitionId": "markers:gold",
+          "target": {
+            "context": "source"
+          },
+          "amount": 1,
+          "duration": {
+            "type": "permanent_on_instance"
+          }
+        }
+      ]
+    },
+    {
+      "id": "spend_gold",
+      "kind": "activated",
+      "speed": "fast",
+      "costs": [
+        {
+          "type": "tap",
+          "object": {
+            "context": "source"
+          }
+        },
+        {
+          "id": "gold",
+          "type": "pay_effect_tokens",
+          "object": {
+            "context": "source"
+          },
+          "definitionId": "markers:gold",
+          "amount": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "draw",
+          "player": {
+            "context": "controller"
+          },
+          "amount": 1
+        }
+      ]
+    }
+  ]
+}

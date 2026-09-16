@@ -1,0 +1,70 @@
+{
+  "id": "examples:dragon_caller",
+  "name": "Зов драконов",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 3
+  },
+  "attack": 1,
+  "health": 3,
+  "abilities": [
+    {
+      "id": "dragon_arrival",
+      "kind": "triggered",
+      "trigger": "creature_entered",
+      "condition": {
+        "type": "and",
+        "items": [
+          {
+            "type": "not_equal",
+            "left": {
+              "type": "read_event",
+              "field": "creature"
+            },
+            "right": {
+              "context": "source"
+            }
+          },
+          {
+            "type": "equal",
+            "left": {
+              "type": "read_event",
+              "field": "controller"
+            },
+            "right": {
+              "context": "controller"
+            }
+          },
+          {
+            "type": "equal",
+            "left": {
+              "type": "read_event",
+              "field": "creatureSnapshot.isToken"
+            },
+            "right": false
+          },
+          {
+            "type": "has_subtype",
+            "object": {
+              "type": "read_event",
+              "field": "creatureSnapshot"
+            },
+            "subtype": "dragon",
+            "read": "snapshot"
+          }
+        ]
+      },
+      "effects": [
+        {
+          "type": "create_token",
+          "tokenRef": "tokens:red_dragon_5_5",
+          "controller": {
+            "context": "controller"
+          },
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "keywords": []
+}

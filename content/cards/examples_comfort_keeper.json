@@ -1,0 +1,37 @@
+{
+  "id": "examples:comfort_keeper",
+  "name": "Утешитель",
+  "typeId": "types:creature",
+  "cost": {
+    "generic": 2
+  },
+  "attack": 1,
+  "health": 3,
+  "abilities": [
+    {
+      "id": "comfort_on_draw",
+      "kind": "triggered",
+      "trigger": "card_drawn",
+      "condition": {
+        "type": "equal",
+        "left": {
+          "type": "read_event",
+          "field": "player"
+        },
+        "right": {
+          "context": "controller"
+        }
+      },
+      "effects": [
+        {
+          "type": "heal",
+          "target": {
+            "context": "controller"
+          },
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "keywords": []
+}

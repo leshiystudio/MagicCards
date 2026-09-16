@@ -1,0 +1,29 @@
+{
+  "id": "examples:wing_gift",
+  "name": "Дар крыльев",
+  "typeId": "types:instant",
+  "cost": {
+    "generic": 1
+  },
+  "targets": [
+    {
+      "id": "victim",
+      "selector": "friendly_creature",
+      "count": 1
+    }
+  ],
+  "effects": [
+    {
+      "type": "grant_ability",
+      "target": {
+        "selected": "victim"
+      },
+      "ability": {
+        "ref": "abilities:flying"
+      },
+      "duration": {
+        "type": "until_end_of_turn"
+      }
+    }
+  ]
+}

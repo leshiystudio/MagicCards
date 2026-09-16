@@ -4,3 +4,9 @@
 # Obsidian session/workspace state (local UI state, not vault content)
 MagicCards/.obsidian/workspace.json
 MagicCards/.obsidian/workspace-mobile.json
+
+# Generated output and local diagnostics
+/dist/
+/artifacts/
+/node_modules/
+/.node_repl_cell_*

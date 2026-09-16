@@ -1,0 +1,34 @@
+{
+  "id": "examples:plague_pulse",
+  "name": "Вспышка чумы",
+  "typeId": "types:spell",
+  "cost": {
+    "generic": 4
+  },
+  "effects": [
+    {
+      "type": "damage",
+      "target": {
+        "selector": "all_enemy_creatures"
+      },
+      "amount": 2
+    }
+  ],
+  "afterResolve": {
+    "effects": [
+      {
+        "type": "heal",
+        "target": {
+          "context": "controller"
+        },
+        "amount": {
+          "type": "count",
+          "items": {
+            "type": "read_event",
+            "field": "deaths"
+          }
+        }
+      }
+    ]
+  }
+}

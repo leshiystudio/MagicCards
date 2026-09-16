@@ -1,0 +1,18 @@
+{
+  "id": "types:resource",
+  "name": "Источник ресурса",
+  "extends": "types:permanent",
+  "categories": [
+    "categories:resource"
+  ],
+  "play": {
+    "method": "source_deploy",
+    "timing": "slow",
+    "resolution": "enter_battlefield"
+  },
+  "components": {
+    "exhaustion": {
+      "readyDelay": "none"
+    }
+  }
+}
